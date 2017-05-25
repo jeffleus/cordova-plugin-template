@@ -9,6 +9,12 @@ var MyCordovaPlugin = {
   },
   getDate: function(cb) {
     exec(cb, null, PLUGIN_NAME, 'getDate', []);
+  },
+  init: function(options, cb) {
+    exec(cb, null, PLUGIN_NAME, 'init', [options]);
+  },
+  login: function(username, password, cb) {
+    exec(cb, null, PLUGIN_NAME, 'login', [username,password]);
   }
 };
 

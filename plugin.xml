@@ -39,8 +39,12 @@
                 <param name="ios-package" value="MyCordovaPlugin" onload="true" />
             </feature>
         </config-file>
-
+		
         <header-file src="src/ios/MyCordovaPlugin.h" />
         <source-file src="src/ios/MyCordovaPlugin.m" />
+		
+<!--		<framework src="lib/ios/AWSCore.framework" embed="true"/>-->
+<!--		<framework src="lib/ios/AWSCognito.framework"/>-->
+<!--		<framework src="lib/ios/AWSCognitoIdentityProvider.framework"/>-->
     </platform>
 </plugin>
