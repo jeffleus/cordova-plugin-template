@@ -11,6 +11,7 @@
 
 
 @interface CognitoPoolIdentityProvider : NSObject <AWSIdentityProviderManager>
+
     @property (strong, nonatomic) NSDictionary *tokens;
 
     - (AWSTask<NSDictionary *> *)logins;
