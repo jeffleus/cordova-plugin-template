@@ -10,24 +10,6 @@
     <repo>https://github.com/driftyco/cordova-plugin-template.git</repo>
     <issue>https://github.com/driftyco/cordova-plugin-template/issues</issue>
 
-    <!-- android -->
-    <platform name="android">
-      <js-module src="www/plugin.js" name="plugin">
-        <runs/>
-
-        <!-- This is the window variable name you want, like window.MyCordovaPlugin -->
-        <clobbers target="MyCordovaPlugin" />
-      </js-module>
-      <config-file target="res/xml/config.xml" parent="/*">
-        <feature name="MyCordovaPlugin">
-          <param name="android-package" value="com.example.MyCordovaPlugin" />
-          <param name="onload" value="true" />
-        </feature>
-      </config-file>
-
-      <source-file src="src/android/com/example/MyCordovaPlugin.java" target-dir="src/com/example/" />
-    </platform>
-
     <!-- ios -->
     <platform name="ios">
         <js-module src="www/plugin.js" name="plugin">
@@ -42,9 +24,16 @@
 		
         <header-file src="src/ios/MyCordovaPlugin.h" />
         <source-file src="src/ios/MyCordovaPlugin.m" />
+        
+        <header-file src="src/ios/CognitoPoolIdentityProvider.h" />
+        <header-file src="src/ios/CognitoCordovaPlugin.h" />
+        <source-file src="src/ios/CognitoPoolIdentityProvider.m" />
+        <source-file src="src/ios/CognitoCordovaPlugin.m" />
 		
-<!--		<framework src="lib/ios/AWSCore.framework" embed="true"/>-->
-<!--		<framework src="lib/ios/AWSCognito.framework"/>-->
-<!--		<framework src="lib/ios/AWSCognitoIdentityProvider.framework"/>-->
+<!--
+		<framework src="lib/ios/AWSCore.framework" embed="true"/>
+		<framework src="lib/ios/AWSCognito.framework" embed="true"/>
+		<framework src="lib/ios/AWSCognitoIdentityProvider.framework" embed="true"/>
+-->
     </platform>
 </plugin>
